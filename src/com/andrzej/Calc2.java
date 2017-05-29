@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Calc2 {
 
 	//a bit more advanced calculator that can read multiple commands in the single equation
-
+	//to be finished later
 
 	public static void main(String[] args) {
 
