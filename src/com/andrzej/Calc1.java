@@ -1,5 +1,7 @@
 package com.andrzej;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -11,43 +13,69 @@ public class Calc1 {
 
 
 	public static void main(String[] args) {
-		Scanner scan1 = new Scanner(System.in);
+		File file = new File("//home/andrzej/dev/InpOutpScanner/kalkulator.csv");
 
-		int result = 0;
-		int inputA, inputB;
-		char operator;
-		boolean calcDone = false;
-		int numbersOfOperations = 0;
-
-//		while (calcDone == false) {
-		System.out.println("Input your equation: ");
-		inputA = scan1.nextInt();
-		operator = scan1.next().charAt(0);
-		inputB = scan1.nextInt();
+		try {
+			Scanner scanFile = new Scanner(file);
 
 
-		switch (operator) {
-			case '+':
-				result = (inputA + inputB);
-				break;
-			case '-':
-				result = (inputA - inputB);
-				break;
-			case '*':
-				result = (inputA * inputB);
-				break;
-			case '/':
-				result = (inputA / inputB);
-				break;
+			String x = scanFile.nextLine();
 
+			System.out.println(x);
+
+//			int y = Integer.parseInt(x);
+
+			int z = Integer.parseInt(x.replace(";", " "));
+
+
+			System.out.println(z);
+
+
+//			Scanner scan2 = new Scanner(System.in);
+
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
-		System.out.println(result);
-
-
-		scan1.close();
-
-
-
-
 	}
 }
+//		Scanner scan1 = new Scanner(System.in);
+//
+//		int result = 0;
+//		int inputA, inputB;
+//		char operator;
+//		boolean calcDone = false;
+//		int numbersOfOperations = 0;
+//
+////		while (calcDone == false) {
+//		System.out.println("Input your equation: ");
+//		inputA = scan1.nextInt();
+//		operator = scan1.next().charAt(0);
+//		inputB = scan1.nextInt();
+//
+//
+//		switch (operator) {
+//			case '+':
+//				result = (inputA + inputB);
+//				break;
+//			case '-':
+//				result = (inputA - inputB);
+//				break;
+//			case '*':
+//				result = (inputA * inputB);
+//				break;
+//			case '/':
+//				result = (inputA / inputB);
+//				break;
+//
+//		}
+//		System.out.println(result);
+//
+//
+//		scan1.close();
+//
+//
+//
+//
+//	}
+//}
